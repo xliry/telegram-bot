@@ -98,7 +98,7 @@ if (strpos($message, "/alarm") === 0) {
      $alarmlar = file_get_contents("./alarm.txt");
      $alarmArray = explode(",",$alarmlar);
      $bulduMu = false;
-     for($i = 0; i<count($alarmArray); i++){
+     for($i = 0; $i<count($alarmArray); $i++){
        if($alarmArray[$i]== $coin){
          $bulduMu = true;
          break;
