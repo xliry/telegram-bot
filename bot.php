@@ -83,12 +83,32 @@ if($message == "/toss"){
 
 ///Commands with text
 
-
     //Google Search
 if (strpos($message, "/search") === 0) {
         $search = substr($message, 8);
          $search = preg_replace('/\s+/', '+', $search);
 $googleSearch = "[View On Web](https://www.google.com/search?q=$search)";
+    if ($googleSearch != null) {
+     send_MDmessage($chat_id,$message_id, $googleSearch);
+    }
+
+  }    //Alarm
+if (strpos($message, "/alarm") === 0) {
+        $coin = substr($message, 8);
+     $alarmlar = file_get_contents("./alarm.txt");
+     $alarmArray = explode(",",$alarmlar)
+     $bulduMu = false;
+     for($i = 0; i<count($alarmArray); i++){
+       if($alarmArray[$i]== $coin){
+         $bulduMu = true;
+         break;
+       }
+     }
+     if(!$bulduMu){
+       array_push($alarmArray,$coin);
+       $strAlarmArray = implode (",", $alarmArray);
+       file_put_contents('./alarm.txt', $strAlarmArray);
+     }
     if ($googleSearch != null) {
      send_MDmessage($chat_id,$message_id, $googleSearch);
     }
