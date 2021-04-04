@@ -12,7 +12,7 @@
     $firstname = $update["message"]["from"]["first_name"];
     $chatname = $_ENV['CHAT']; 
  /// for broadcasting in Channel
-$channel_id = "-100xxxxxxxxxx";
+$channel_id = "-575203487";
 
 /////////////////////////
 
