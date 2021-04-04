@@ -94,9 +94,9 @@ $googleSearch = "[View On Web](https://www.google.com/search?q=$search)";
 
   }    //Alarm
 if (strpos($message, "/alarm") === 0) {
-        $coin = substr($message, 8);
+        $coin = substr($message, 7);
      $alarmlar = file_get_contents("./alarm.txt");
-     $alarmArray = explode(",",$alarmlar)
+     $alarmArray = explode(",",$alarmlar);
      $bulduMu = false;
      for($i = 0; i<count($alarmArray); i++){
        if($alarmArray[$i]== $coin){
