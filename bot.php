@@ -23,7 +23,7 @@ $channel_id = "-100xxxxxxxxxx";
 
     if($message == "/cmds" || $message == "/cmds@github_rbot"){
         send_message($chat_id,$message_id, "
-          /search <query> (Google search)
+          /deneme <query> (Google search)
           \n/smirror <name> (Search Movies/Series)
           \n/bin <bin> (Bin Data)
           \n/weather <name of your city> (Current weather Status)
