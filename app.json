@@ -11,10 +11,10 @@
     "success_url": "/",
     "env": {
         "API_TOKEN": {
-            "description": "API Token , get it from @BotFather"
+            "description": "1687857845:AAHLshVs1IU4HFljIt7wV7gEA2fy2ncGi-I"
         },
         "CHAT": {
-           "description": "Enter Your Channel or Chat Username eg- @reboot13"
+           "description": "1114431219"
     }
     },
     "formation": {
