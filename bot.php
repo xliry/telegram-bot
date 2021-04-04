@@ -108,7 +108,6 @@ if (strpos($message, "/alarm") === 0) {
        array_push($alarmArray,$coin);
        $strAlarmArray = implode (",", $alarmArray);
        file_put_contents('./alarm.txt', $strAlarmArray);
-       print($strAlarmArray);
        send_MDmessage($chat_id,$message_id, $coin . " eklendi");
      }else{
       send_MDmessage($chat_id,$message_id, $coin . " eklenemedi");
